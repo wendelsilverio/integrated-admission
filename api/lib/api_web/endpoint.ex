@@ -2,7 +2,7 @@ defmodule ApiWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :api
 
   socket "/socket", ApiWeb.UserSocket,
-    websocket: [timeout: 45_000],
+    websocket: true,
     longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.
@@ -38,7 +38,7 @@ defmodule ApiWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_api_key",
-    signing_salt: "0UHfnFF1"
+    signing_salt: "RSMbm+vW"
 
   plug ApiWeb.Router
 end

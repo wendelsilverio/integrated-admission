@@ -5,7 +5,7 @@ defmodule ApiWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api/v1", ApiWeb do
+  scope "/api", ApiWeb do
     pipe_through :api
   end
 end
